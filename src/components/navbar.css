@@ -1,0 +1,120 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  z-index: 1000;
+  transition: padding 0.3s ease;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.title-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.title-container h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #6fa9eb;
+  max-width: 70%;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  font-family: 'EB Garamond', serif;
+  text-transform: uppercase;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.links a {
+  color: #f7b35a;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.links a:hover {
+  color: #f890e3;
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+.links .phosphor-icon {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.links .phosphor-icon:hover {
+  color: #ff6347;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .title-container h2 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .links {
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .links a {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .links {
+    margin-top: 10px;
+  }
+  .logo{
+    width: 50px;
+    height: 50px;
+  }
+  .title-container h2 {
+    font-size: 1.1rem;
+    max-width: 360px;
+  }
+  .links a {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f9f9f9; 
+  color: #333; 
+  margin: 0;
+  padding: 0;
+  background-image: url(../../assets/26.jpg);
+}
+.shop{
+  margin-top: 155px;
+}
+.shopTitle {
+  margin: 0px auto 5vw; 
+  max-width: 80%; 
+  padding: 17px;
+  border: 4px dashed rgb(14, 14, 59);
+  background-color: rgb(182, 248, 124);
+  border-radius: 30px;
+  color: blue;
+  text-align: center;
+  font-size: 1.7rem;
+  z-index: 3; 
+}
+
+.products {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.product {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efeeee;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+  width: 100%; 
+  max-height: 300px; 
+  border-radius: 15px;
+  border: 5px solid rgb(33, 11, 11);
+  object-fit: cover; 
+}
+
+.product .description {
+  text-align: center;
+  margin-top: 2px;
+}
+
+.addToCartBttn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.addToCartBttn:hover {
+  background-color: #65457d;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .shop{
+    margin-top: 180px;
+  }
+
+  .shopTitle {
+    font-size: 1rem;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 10px;
+  }
+
+  .product img {
+    max-height: 200px;
+  }
+
+  .addToCartBttn {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop{
+    margin-top: 150px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .shopTitle {
+    font-size: 0.7rem;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .product img {
+    max-height: 300px;
+  }
+
+  .addToCartBttn {
+    padding: 6px 12px;
+  }
+}
